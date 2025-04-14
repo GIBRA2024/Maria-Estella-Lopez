@@ -29,7 +29,7 @@
            target="_blank"><img src="Imagenes/facebook-brands.png" alt="Pagina Web">Facebook</a>
         <a href="https://drive.google.com/drive/folders/1owy2VSxo-CqSmBknrId_q59zJ77-odKi?usp=sharing "
            target="_blank"><img src="Imagenes/image-solid.png" alt="Pagina Web">Fotos productos</a>
-        <a href="https://docs.google.com/spreadsheets/d/15lgQBUPLVEC_Y-zHHGT3qMpnuUKnINTz/edit?usp=sharing&ouid=105478255770106490532&rtpof=true&sd=true"
+        <a href="#" id="link-centralizado"
            target="_blank"><img src="Imagenes/list-ul-solid.png" alt="Pagina Web">Lista de precios</a>
     </div>
 
@@ -40,6 +40,18 @@
     <footer>
         <p><a class="link-footer" href="https://www.instagram.com/gibra_company/" target="_blank">&copy; 2025 Gibra. Todos los derechos reservados.</a></p>
     </footer>
+
+    <script>
+     fetch("https://gibra2024.github.io/Enlace-Cervalle/link-actual.txt") // tu URL aquí
+       .then(res => res.text())
+       .then(link => {
+         document.getElementById("link-centralizado").href = link.trim();
+       })
+       .catch(error => {
+         console.error("No se pudo cargar el link:", error);
+       });
+   </script>
+    
 </div>
 </body>
 </html>
